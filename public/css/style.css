@@ -1,0 +1,259 @@
+header,
+nav,
+.container {
+    flex-wrap: wrap;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    padding: 200px;
+}
+
+header img,
+header button {
+    margin: 0 200px;
+}
+
+.btn {
+    background-color: #bd0b0b;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #a00000;
+    color: white !important;
+}
+
+/* Menghapus segitiga (caret) pada tombol dropdown */
+.dropdown-toggle::after {
+    display: none;
+}
+
+/* Wrapper untuk tombol dropdown */
+.profile-dropdown-wrapper {
+    position: relative;
+    margin-right: 10px; /* Memberikan ruang jika perlu */
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: absolute;
+    top: 70px;
+    right: 140px; /* Geser dropdown sedikit ke kiri */
+    width: 230px;
+    padding: 4px;
+    background-color: #bd0b0b;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+    z-index: 9999; /* Dropdown berada di atas navbar */
+}
+
+/* Dropdown aktif */
+.dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Info Profil */
+.dropdown .profile-info {
+    padding: 10px;
+    text-align: center; /* Menengahkan konten secara horizontal */
+}
+
+/* Gambar Avatar */
+.dropdown .profile-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    display: block; /* Agar gambar menjadi block element */
+    margin-left: auto;  /* Untuk menengahkan gambar secara horizontal */
+    margin-right: auto; /* Untuk menengahkan gambar secara horizontal */
+}
+
+/* Nama Profil */
+.dropdown .profile-info span {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    border-bottom: solid 2px #ff0000;
+    box-shadow: 0px 4px 0px #a00000;
+    margin-bottom: 10px;
+}
+
+/* List Menu */
+.dropdown ul {
+    list-style: none;
+    padding: 10px;
+}
+
+.dropdown ul li {
+    margin: 10px 0;
+}
+
+.dropdown ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    border-bottom: solid 2px #ff0000;
+    box-shadow: 0px 4px 0px #a00000;
+    font-size: 15px;
+    font-weight: bold;
+    display: grid;
+    text-align: left;
+}
+
+/* Hover efek */
+.dropdown ul li a:hover {
+    color: #ff0000;
+}
+
+/* Menyelaraskan Tombol Logout dengan Menu Dropdown Lainnya */
+.logout-btn {
+    background-color: transparent;  /* Transparan agar sesuai dengan latar belakang */
+    border: none;  /* Tanpa border */
+    border-bottom: solid 2px #ff0000;
+    box-shadow: 0px 4px 0px #a00000;
+    color: #ffffff;  /* Warna teks putih seperti menu lainnya */
+    padding: 0px;  /* Padding agar sesuai dengan item menu lainnya */
+    font-size: 15px;  /* Ukuran font agar konsisten */
+    font-weight: bold;  /* Teks lebih tebal agar konsisten */
+    text-align: left;  /* Posisi teks di kiri, seperti menu lainnya */
+    width: 100%;  /* Tombol memenuhi lebar item menu */
+    display: block;  /* Menjamin tombol tampil penuh dalam baris */ 
+    margin-left: 0px;
+}
+
+/* Hover efek untuk tombol logout */
+.logout-btn:hover {
+    color: #ff0000;  /* Mengubah warna teks menjadi merah saat hover */
+    cursor: pointer;  /* Menambahkan pointer saat hover */
+}
+
+/* Mengatur tombol logout agar sesuai dengan efek dan box shadow */
+.logout-btn:focus {
+    outline: none;  /* Menghapus outline standar saat tombol difokuskan */
+    box-shadow: 0px 4px 0px #a00000;  /* Menambahkan box shadow saat tombol difokuskan */
+}
+
+
+
+/* Navbar */
+.navbar-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 5px;
+}
+
+.navbar .nav-link {
+    padding: 3px 10px;
+    background-color: #d90b0b;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 0px #a00000;
+    transition: background-color 0.3s, color 0.3s;
+    margin: 0 30px;
+}
+
+.navbar .nav-link:hover {
+    background-color: #a00000;
+    color: white !important;
+}
+
+.navbar {
+    background-color: #bd0b0b;
+    z-index: 1; /* Navbar berada di bawah dropdown */
+}
+
+/* Menambahkan z-index pada navbar nav-link */
+.navbar .nav-link {
+    z-index: 2; /* Navbar link berada di bawah dropdown */
+}
+
+.col-md-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.section-title {
+    color: #bd0b0b;
+    font-weight: bold;
+}
+
+.title-background {
+    background-color: #bd0b0b;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card-index {
+    background-color: #a00000;
+    color: white;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 8px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    padding-left: 15px;
+    border-left: 1px solid white;
+}
+
+.tanggal {
+    color: white;
+    text-align: right;
+}
+
+.card-custom {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.card-header-custom {
+    background-color: #bd0b0b;
+    color: white;
+    font-weight: bold;
+}
+.accordion-button:not(.collapsed) {
+    background-color: #bd0b0b;
+    color: white;
+}
+.accordion-button.collapsed {
+    background-color: #f9f9f9;
+    color: #bd0b0b;
+}
